@@ -2,7 +2,7 @@
     <ion-menu content-id="main-content" type="overlay">
         <ion-content>
             <div class="flex items-center justify-center">
-                <ion-img class="h-40 w-44" src="src/assets/logoapp.png" alt="Logo"></ion-img>
+                <ion-img class="h-40 w-44" :src="`${baseUrl}logoapp.png`" alt="Logo"></ion-img>
             </div>
             <ion-list id="inbox-list">
 
@@ -39,6 +39,7 @@ import {
     homeOutline,
 } from 'ionicons/icons';
 
+const baseUrl = import.meta.env.BASE_URL;
 const selectedIndex = ref(0);
 const appPages = [
     {
