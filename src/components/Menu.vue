@@ -2,7 +2,7 @@
     <ion-menu content-id="main-content" type="overlay">
         <ion-content>
             <div class="flex items-center justify-center">
-                <ion-img class="h-40 w-44" src="../../public/logoapp.png" alt="Logo"></ion-img>
+                <ion-img class="h-40 w-44" src="src/assets/logoapp.png" alt="Logo"></ion-img>
             </div>
             <ion-list id="inbox-list">
 

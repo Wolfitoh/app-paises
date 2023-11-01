@@ -106,13 +106,13 @@ continents {
 `;
 
 const diccionarioIconos: DiccionarioIconos = {
-  NA: "../../public/continentes/americadelnorte.jpg",
-  EU: "../../public/continentes/europa.jpg",
-  AS: "../../public/continentes/asia.jpg",
-  OC: "../../public/continentes/oceania.png",
-  AF: "../../public/continentes/africa.jpg",
-  SA: "../../public/continentes/americadelsur.png",
-  AN: "../../public/continentes/antartida.png"
+  NA: "src/assets/continentes/americadelnorte.jpg",
+  EU: "src/assets/continentes/europa.jpg",
+  AS: "src/assets/continentes/asia.jpg",
+  OC: "src/assets/continentes/oceania.png",
+  AF: "src/assets/continentes/africa.jpg",
+  SA: "src/assets/continentes/americadelsur.png",
+  AN: "src/assets/continentes/antartida.png"
 };
 
 let countries: Ref<ResponseAllCountries[]> = ref([]);
