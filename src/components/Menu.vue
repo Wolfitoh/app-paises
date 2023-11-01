@@ -63,7 +63,7 @@ const appPages = [
 ];
 
 const path = window.location.pathname.split('folder/')[1];
-console.log(path);
+
 if (path !== undefined) {
     selectedIndex.value = appPages.findIndex((page) => page.title.toLowerCase() === path.toLowerCase());
 }

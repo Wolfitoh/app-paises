@@ -62,7 +62,7 @@
 
 <script setup lang="ts">
 import { defineProps, ref } from 'vue';
-import { IonGrid, IonSpinner, IonPopover, IonContent, IonRow, IonCol, IonList, IonItem } from '@ionic/vue';
+import { IonGrid, IonSpinner, IonPopover, IonContent, IonRow, IonCol, IonList, IonItem, IonLabel, IonCardTitle, IonCardSubtitle } from '@ionic/vue';
 import { provideApolloClient, useQuery } from '@vue/apollo-composable';
 import gql from 'graphql-tag'
 import { ResponseAllCountries, Country } from '@/data/responses';
@@ -120,9 +120,8 @@ const searchCountry = async (code: string) => {
     const accessKey = "19126150-166c9632a9f9a358f019e2250";
 
     await refetch();
-    console.log(id.value, code)
+
     if (result.value && result.value.country) {
-        console.log(result.value.country);
         let country: Country = result.value.country;
         const countryCopy = Object.assign({}, country); // Crear una copia del objeto country
 

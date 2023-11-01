@@ -21,7 +21,7 @@
 
 <script setup lang="ts">
 import { ResponseAllCountries } from '@/data/responses';
-import { IonCard, IonImg, IonCardHeader, IonCardSubtitle, IonCardTitle, IonPopover, IonContent } from '@ionic/vue';
+import { IonCard, IonImg, IonCardHeader, IonCardSubtitle, IonCardTitle } from '@ionic/vue';
 import { onMounted, ref } from 'vue';
 import axios from "axios";
 

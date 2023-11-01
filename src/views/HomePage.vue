@@ -55,7 +55,9 @@
           </ion-grid>
         </div>
 
-        <ListaPaises class="h-5/6" :countries="filteredCountries" :loading="loadings" />
+        <div class="h-5/6">
+          <ListaPaises :countries="filteredCountries" :loading="loadings" />
+        </div>
       </div>
 
     </ion-content>
@@ -143,7 +145,6 @@ onMounted(async () => {
   await consultaContinentes.refetch();
 
   continentes.value = consultaContinentes.result.value.continents;
-  console.log("CONTINENTES", continentes.value);
 
   countries.value = result.value.countries;
   filteredCountries.value = result.value.countries;
