@@ -35,8 +35,8 @@ const props = defineProps({
         required: false,
     },
 });
-
-let countryImg = ref('../../public/default.png');
+const baseUrl = import.meta.env.BASE_URL;
+let countryImg = ref(baseUrl + 'default.png');
 
 onMounted(() => {
     const accessKey = "19126150-166c9632a9f9a358f019e2250"; // Reemplaza con tu API Key de Unsplash

@@ -104,15 +104,15 @@ continents {
 }
 }
 `;
-
+const baseUrl = import.meta.env.BASE_URL;
 const diccionarioIconos: DiccionarioIconos = {
-  NA: "src/assets/continentes/americadelnorte.jpg",
-  EU: "src/assets/continentes/europa.jpg",
-  AS: "src/assets/continentes/asia.jpg",
-  OC: "src/assets/continentes/oceania.png",
-  AF: "src/assets/continentes/africa.jpg",
-  SA: "src/assets/continentes/americadelsur.png",
-  AN: "src/assets/continentes/antartida.png"
+  NA: baseUrl + "americadelnorte.jpg",
+  EU: baseUrl + "europa.jpg",
+  AS: baseUrl + "asia.jpg",
+  OC: baseUrl + "oceania.png",
+  AF: baseUrl + "africa.jpg",
+  SA: baseUrl + "americadelsur.png",
+  AN: baseUrl + "antartida.png"
 };
 
 let countries: Ref<ResponseAllCountries[]> = ref([]);
