@@ -44,7 +44,7 @@ const selectedIndex = ref(0);
 const appPages = [
     {
         title: 'Home',
-        url: '/home',
+        url: '/',
         iosIcon: homeOutline,
         mdIcon: home,
     },

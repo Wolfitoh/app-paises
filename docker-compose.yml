@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  app-paises:
+    image: app-paises
+    container_name: paises
+    restart: always
+    ports:
+      - 8000:8000
+

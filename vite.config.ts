@@ -9,6 +9,7 @@ export default defineConfig({
     vue(),
     legacy()
   ],
+  base: '/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

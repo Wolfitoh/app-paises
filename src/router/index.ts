@@ -7,11 +7,6 @@ import Vista2Page from '../views/Vista2Page.vue'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/home'
-  },
-  {
-    path: '/home',
-    name: 'Home',
     component: HomePage
   },
   {
