@@ -1,0 +1,7 @@
+{
+  "name": "app-paises",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
