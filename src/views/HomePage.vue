@@ -82,7 +82,7 @@ import ListaPaises from '@/components/ListaPaises.vue';
 
 import { useQuery } from '@vue/apollo-composable'
 import gql from 'graphql-tag'
-import { ResponseAllCountries, Continent } from '@/data/responses';
+import { ResponseAllCountries, Continent, DiccionarioIconos } from '@/data/responses';
 
 const GET_ITEMS = gql`
   query {
@@ -105,7 +105,7 @@ continents {
 }
 `;
 
-const diccionarioIconos = {
+const diccionarioIconos: DiccionarioIconos = {
   NA: "../../public/continentes/americadelnorte.jpg",
   EU: "../../public/continentes/europa.jpg",
   AS: "../../public/continentes/asia.jpg",

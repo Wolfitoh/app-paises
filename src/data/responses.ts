@@ -27,3 +27,7 @@ interface Language {
 interface State {
     name: string
 }
+
+export interface DiccionarioIconos {
+    [key: string]: string;
+}
