@@ -1,5 +1,5 @@
 <template>
-    <ion-card class="w-full ion-no-margin rounded-3xl"
+    <ion-card class="w-full ion-no-margin rounded-3xl cursor-pointer"
         :style="{ backgroundColor: selected ? 'var(--ion-color-success)' : 'var(--ion-color-light)' }">
         <ion-img :src="countryImg" class="h-36 object-cover"></ion-img>
         <ion-card-header>

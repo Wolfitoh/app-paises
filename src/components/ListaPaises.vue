@@ -1,5 +1,5 @@
 <template>
-    <ion-grid class='h-full' :fixed="true" id="click-trigger">
+    <ion-grid class='h-full' :fixed="true">
         <template v-if="loading">
             <div class="flex justify-center items-center w-full h-full">
                 <IonSpinner name="crescent" />
@@ -10,7 +10,7 @@
             <ion-row class="ion-justify-content-center">
                 <template v-for="country in countries" :key="country.code">
                     <ion-col class="p-3" size-xs="12" size-sm="6" size-md="4" size="3">
-                        <CardPais :country="country" @click="searchCountry(country.code)"
+                        <CardPais :country="country" id="click-trigger" @click="searchCountry(country.code, $event)"
                             :selected="country.code === countrySelected?.code" />
                     </ion-col>
                 </template>
@@ -18,8 +18,7 @@
         </template>
     </ion-grid>
 
-    <ion-popover v-model="showSplitPane" trigger="click-trigger" trigger-action="click" side="right"
-        @ionPopoverDidDismiss="clearCountrySelected">
+    <ion-popover :is-open="showSplitPane" :event="event" side="right" @ionPopoverDidDismiss="clearCountrySelected">
         <ion-content class="ion-padding">
             <div class="flex flex-col">
                 <img class="w-full object-cover" :src="countrySelected?.countryImg" alt="">
@@ -107,10 +106,13 @@ const props = defineProps({
 let countrySelected = ref<Country>();
 
 const showSplitPane = ref(false);
+const event = ref<Event>();
 
 let id = ref('');
 
-const searchCountry = async (code: string) => {
+const searchCountry = async (code: string, e: Event) => {
+    event.value = e;
+    showSplitPane.value = true;
     id.value = code;
     const { result, refetch } = useQuery(GET_COUNTRY, {
         id: id.value,
@@ -141,6 +143,7 @@ const searchCountry = async (code: string) => {
 };
 
 const clearCountrySelected = () => {
+    showSplitPane.value = false;
     countrySelected.value = undefined;
 };
 </script>
